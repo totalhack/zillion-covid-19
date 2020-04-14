@@ -1,2 +1,2 @@
-zillion
+zillion>=0.2.10
 
