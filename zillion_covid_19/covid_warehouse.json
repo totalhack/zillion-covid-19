@@ -3,220 +3,220 @@
         {
             "name": "cases",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "deaths",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "hospitalized",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "in_icu",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "on_ventilator",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "recovered",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "negative_tests",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },        
         {
             "name": "test_results",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "hospital_beds",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "hospitals",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "icu_beds",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "population",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
 
         {
             "name": "cumulative_cases",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_deaths",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_hospitalized",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_in_icu",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_recovered",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_on_ventilator",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_negative_tests",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_test_results",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "cumulative_pending_tests",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "currently_hospitalized",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "currently_in_icu",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },
         {
             "name": "currently_on_ventilator",
             "type": "Integer",
-            "aggregation": "sum"
+            "aggregation": "SUM"
         },        
 
         {
             "name": "death_rate",            
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 3,
             "formula": "1.0*{deaths}/{cases}"
         },
         {
             "name": "hospitalized_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{hospitalized}/{cases}"
         },
         {
             "name": "hospitalized_death_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{deaths}/{hospitalized}"
         },
         {
             "name": "negative_test_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{negative_tests}/{test_results}"
         },
         {
             "name": "positive_test_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{cases}/{test_results}"
         },
 
         {
             "name": "hospital_capacity_used",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 3,
             "formula": "1.0*{currently_hospitalized}/{hospital_beds}"
         },
         {
             "name": "icu_bed_capacity_used",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{currently_in_icu}/{icu_beds}"
         },
         
         {
             "name": "cumulative_recovered_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{cumulative_recovered}/{cumulative_cases}"
         },
         {
             "name": "cumulative_ventilator_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{cumulative_on_ventilator}/{cumulative_cases}"
         },        
         {
             "name": "cumulative_negative_test_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{cumulative_negative_tests}/{cumulative_test_results}"
         },
         {
             "name": "cumulative_positive_test_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{cumulative_cases}/{cumulative_test_results}"
         },
         {
             "name": "cumulative_cases_per_1M",            
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 0,
             "formula": "1.0*{cumulative_cases}/({population}/1000000.0)"
         },
         {
             "name": "cumulative_deaths_per_1M",            
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 0,
             "formula": "1.0*{cumulative_deaths}/({population}/1000000.0)"
         },
         {
             "name": "cumulative_icu_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{cumulative_in_icu}/{cumulative_cases}"
         },
         {
             "name": "cumulative_death_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 3,
             "formula": "1.0*{cumulative_deaths}/{cumulative_cases}"
         },
         {
             "name": "cumulative_hospitalized_rate",
-            "aggregation": "avg",
+            "aggregation": "MEAN",
             "rounding": 2,
             "formula": "1.0*{cumulative_hospitalized}/{cumulative_cases}"
         },
@@ -224,50 +224,50 @@
         {
             "name": "cases_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         },
         {
             "name": "deaths_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         },
         {
             "name": "hospitalized_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         },
         {
             "name": "in_icu_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         },
         {
             "name": "on_ventilator_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         },
         {
             "name": "recovered_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         },
         {
             "name": "test_results_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         },
         {
             "name": "negative_tests_cumsum",
             "type": "Integer",
-            "aggregation": "sum",
-            "technical": "CUMSUM"
+            "aggregation": "SUM",
+            "technical": "CUMSUM:ALL"
         }
     ],
 
@@ -363,7 +363,7 @@
             "url": "sqlite:///sqlite.db",
             "tables": {
                 "main.iso1_geos": {
-                    "type": "dimension",
+                    "type": "DIMENSION",
                     "primary_key": ["iso1"],
                     "columns": {
                         "iso1": {"fields":["iso1"]},
@@ -375,14 +375,14 @@
                 },
 
                 "main.iso1_stats_view": {
-                    "type": "metric",
+                    "type": "METRIC",
                     "primary_key": ["iso1"],
                     "create_fields": true,
                     "use_full_column_names": false
                 },
 
                 "main.iso2_geos": {
-                    "type": "dimension",
+                    "type": "DIMENSION",
                     "primary_key": ["iso2"],
                     "parent": "main.iso1_geos",
                     "columns": {
@@ -396,14 +396,14 @@
                 },
 
                 "main.iso2_stats_view": {
-                    "type": "metric",
+                    "type": "METRIC",
                     "primary_key": ["iso2"],
                     "create_fields": true,
                     "use_full_column_names": false
                 },
 
                 "main.fips": {
-                    "type": "dimension",
+                    "type": "DIMENSION",
                     "primary_key": ["fips"],
                     "parent": "main.iso2_geos",
                     "columns": {
@@ -419,28 +419,28 @@
                 },
 
                 "main.fips_stats_view": {
-                    "type": "metric",
+                    "type": "METRIC",
                     "primary_key": ["fips"],
                     "create_fields": true,
                     "use_full_column_names": false
                 },               
                 
                 "main.iso2_healthcare_capacity": {
-                    "type": "metric",
+                    "type": "METRIC",
                     "primary_key": ["iso2"],
                     "create_fields": true,
                     "use_full_column_names": false
                 },
 
                 "main.fips_icu_beds": {
-                    "type": "metric",
+                    "type": "METRIC",
                     "primary_key": ["fips"],
                     "create_fields": true,
                     "use_full_column_names": false
                 },
                
                 "main.fips_timeseries_view": {
-                    "type": "metric",
+                    "type": "METRIC",
                     "primary_key": ["date", "fips"],
                     "create_fields": true,
                     "use_full_column_names": false,
@@ -456,7 +456,7 @@
                 },
 
                 "main.iso2_timeseries_view": {
-                    "type": "metric",
+                    "type": "METRIC",
                     "primary_key": ["date", "iso1", "iso2"],
                     "incomplete_dimensions": ["iso2"],
                     "use_full_column_names": false,
