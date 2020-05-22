@@ -1,5 +1,4 @@
 ENV := $(HOME)/venvs/zillion_covid
-TEST_ENV := /tmp/zillion_covid_19_pip_test/
 PACKAGE_NAME := 'zillion_covid_19'
 VERSION := $(shell python setup.py --version)
 EGG_OPTIONS := egg_info
