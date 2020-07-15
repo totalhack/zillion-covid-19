@@ -360,7 +360,12 @@
     
     "datasources": {
         "glide_covid_19": {
-            "connect": "sqlite:///sqlite.db",
+            "connect": {
+                "params": {
+                    "data_url": "https://github.com/kmatarese/glide-covid-19/blob/master/glide_covid_19/data/sqlite.db?raw=true",
+                    "if_exists": "ignore"
+                }
+            },
             "tables": {
                 "main.iso1_geos": {
                     "type": "dimension",

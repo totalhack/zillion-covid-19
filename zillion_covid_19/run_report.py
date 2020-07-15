@@ -31,7 +31,7 @@ def main(metrics=None, dimensions=None, criteria=None, log_level=None):
     print("Criteria:", criteria)
 
     result = wh.execute(metrics=metrics, dimensions=dimensions, criteria=criteria)
-    print(result.df)
+    print(result.df_display)
 
 
 if __name__ == "__main__":
