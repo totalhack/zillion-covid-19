@@ -369,7 +369,8 @@
             "connect": {
                 "params": {
                     "data_url": "https://github.com/kmatarese/glide-covid-19/blob/master/glide_covid_19/data/sqlite.db?raw=true",
-                    "if_exists": "ignore"
+                    "if_exists": "replace_after",
+                    "replace_after": "6 hours"
                 }
             },
             "tables": {
@@ -525,8 +526,18 @@
                     "primary_key": [
                         "iso2"
                     ],
-                    "create_fields": true,
-                    "use_full_column_names": false
+                    "columns": {
+                        "iso2": {
+                            "fields": [
+                                "iso2"
+                            ]
+                        },
+                        "hospital_beds": {
+                            "fields": [
+                                "hospital_beds"
+                            ]
+                        }
+                    }
                 },
                 "main.fips_icu_beds": {
                     "type": "metric",
