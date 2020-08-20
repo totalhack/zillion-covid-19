@@ -59,5 +59,4 @@ Use `--help` for more information. The output is simply a printed dataframe,
 so data may be truncated in the terminal. 
 
 > **Note:** this is meant to be a quick example. Zillion is still in its
-infancy and is subject to rapid changes. The source data is not being updated
-automatically.
+infancy and is subject to rapid changes.
