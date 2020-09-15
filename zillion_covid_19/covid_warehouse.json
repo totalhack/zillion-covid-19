@@ -103,49 +103,73 @@
             "name": "cumulative_cases",
             "description": "Cumulative case count",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "cumulative_deaths",
             "description": "Cumulative death count",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "cumulative_hospitalized",
             "description": "Cumulative hospitalization count",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "cumulative_in_icu",
             "description": "Cumulative count of cases in ICU",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "cumulative_recovered",
             "description": "Cumulative count of recovered cases",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "cumulative_on_ventilator",
             "description": "Cumulative count of cases on a ventilator",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "cumulative_negative_tests",
             "description": "Cumulative count of negative tests",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "cumulative_test_results",
             "description": "Cumulative count of total tests",
             "type": "integer",
-            "aggregation": "sum"
+            "aggregation": "sum",
+            "meta": {
+                "group": "Cumulative Metrics"
+            }
         },
         {
             "name": "currently_hospitalized",
